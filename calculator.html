@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Addition and Subtraction</h2>
+        <form id="calcForm">
+            <input type="number" id="number1" placeholder="Enter first number" required>
+            <input type="number" id="number2" placeholder="Enter second number" required>
+            <select id="operation">
+                <option value="add">Addition</option>
+                <option value="subtract">Subtraction</option>
+            </select>
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            var operation = document.getElementById("operation").value;
+            var result;
+
+            if (operation === "add") {
+                result = number1 + number2;
+            } else if (operation === "subtract") {
+                result = number1 - number2;
+            }
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
