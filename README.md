@@ -1,0 +1,4 @@
+-One person creates addition and subtraction html code in a pc 
+-Another person creates multiplication and divsion html code in another pc
+-One creates a github repository and adds collaborator
+-using the repository link both push the files 
